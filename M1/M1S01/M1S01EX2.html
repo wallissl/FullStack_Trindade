@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> M1S01 EX1 </title>
+        <title>M1S01 EX2</title>
     </head>
     <body>
         
@@ -19,7 +19,8 @@
                 altura = "1,65",
                 idade = "31",
                 sexo = "M",
-                Sala = "Trindade01"
+                Sala = "Trindade01",
+                matematica = 7,
             ],
 
             aluno02: [
@@ -27,7 +28,8 @@
                 altura = "1,55",
                 idade = "24",
                 sexo = "F",
-                Sala = "Trindade02"
+                Sala = "Trindade02",
+                matematica = 5,
             ],
 
             aluno03: [
@@ -35,7 +37,8 @@
                 altura = "1,20",
                 idade = "10",
                 sexo = "F",
-                Sala = "Trindade03"
+                Sala = "Trindade03",
+                matematica = 4,
             ],
 
             aluno04: [
@@ -43,7 +46,8 @@
                 altura = "1,35",
                 idade = "9",
                 sexo = "M",
-                Sala = "Trindade04"
+                Sala = "Trindade04",
+                matematica = 3,
             ],
 
             aluno05: [
@@ -51,10 +55,13 @@
                 altura = "1,80",
                 idade = "35",
                 sexo = "M",
-                Sala = "Trindade05"
+                Sala = "Trindade05",
+                matematica = 6,
             ],
         }]
 
-        console.log(alunos[length]);
+        var media = [(alunos[length].aluno01[5] + alunos[length].aluno02[5] + alunos[length].aluno03[5] + alunos[length].aluno04[5] + alunos[length].aluno05[5]) / 5];
+
+        console.log(console.log(media));
     </script>
 </html>
