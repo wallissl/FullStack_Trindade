@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>M1S01 EX3</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+
+        var alunos = [{           
+
+                nome : "Wallis",
+                altura : "1,65",
+                idade : "31",
+                sexo : "M",
+                Sala : "Trindade01",
+                matematica : 7,
+                },
+                {       
+                nome : "Ana",
+                altura : "1,55",
+                idade : "24",
+                sexo : "F",
+                Sala : "Trindade02",
+                matematica : 5,
+                },
+                {
+                nome : "Kami",
+                altura : "1,20",
+                idade : "10",
+                sexo : "F",
+                Sala : "Trindade03",
+                matematica : 4,
+                },{
+                nome : "Popo",
+                altura : "1,35",
+                idade : "9",
+                sexo : "M",
+                Sala : "Trindade04",
+                matematica : 3,
+                },
+                {
+                nome : "Goku",
+                altura : "1,80",
+                idade : "35",
+                sexo : "M",
+                Sala : "Trindade05",
+                matematica : 10
+            }]
+        
+        function aprovadoOuReprovado(nota) {
+            
+            if(nota >= 7){
+                return ("Aprovado!");
+            }else{
+                return ("Reprovado!");
+            }
+        }        
+
+        /* console.log("Olá " + alunos[0].aluno01[0] + ", sua nota é " + alunos[0].aluno01[5] + ", " + aprovadoOuReprovado(alunos[0].aluno01[5]));
+        console.log("Olá " + alunos[0].aluno02[0] + ", sua nota é " + alunos[0].aluno02[5] + ", " + aprovadoOuReprovado(alunos[0].aluno02[5]));
+        console.log("Olá " + alunos[0].aluno03[0] + ", sua nota é " + alunos[0].aluno03[5] + ", " + aprovadoOuReprovado(alunos[0].aluno03[5])); 
+        console.log("Olá " + alunos[0].aluno04[0] + ", sua nota é " + alunos[0].aluno04[5] + ", " + aprovadoOuReprovado(alunos[0].aluno04[5])); 
+        console.log("Olá " + alunos[0].aluno05[0] + ", sua nota é " + alunos[0].aluno05[5] + ", " + aprovadoOuReprovado(alunos[0].aluno05[5])); */
+
+
+
+/* 
+          for (i = 0; i < alunos.length; i++){
+            console.log(alunos[i].matematica);
+         }  */
+
+         alunos.forEach((aluno) => {
+            console.log("Ola " + aluno.nome + ", sua nota é " + aluno.matematica + ", " + aprovadoOuReprovado(aluno.matematica));
+        }); 
+       
+    </script>
+</html>
