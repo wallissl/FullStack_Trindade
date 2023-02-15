@@ -58,3 +58,43 @@ const numeros = [1,2,3,4,5,6,7,8,9];
 console.log( numeros.every( (num) => num < 40 )) */
 
 
+// ---------------------  AULA 14/02/23 - M1S3A2 - REDUZIR UM ARRAY - MODELARIZAÇÃO  ---------------------
+
+/* console.log("Hello");
+
+const carteiras = [29.55,41.22,33.54,12.12];
+
+const carteiraTotal = carteiras.reduce((acumulador,valorAtual) =>{
+    return acumulador = acumulador + valorAtual;
+})
+
+console.log(carteiraTotal); */
+
+/* const carteiras = [29.55,41.22,33.54,12.12];
+
+const carteiraTotal = carteiras.reduce((acumulador,valorAtual, indiceAtual, array) =>{
+    acumulador += valorAtual;
+    if (indice === array.length -1) {
+        return acumulador / array.length;
+    }else{
+        return acumulador;
+    }
+}) */
+
+
+// MÓDULOS -- Utilizamos para poder importar e exportar conteúdos entre os nossos arquivos.
+
+import {aluno, boaNoite, meuNome} from './variables.js';
+
+import imprime from './variables.js';
+
+console.log(aluno, boaNoite)
+meuNome();
+
+imprime();
+
+// Outra forma 
+
+import * as variaveis from "./variables.js"
+
+console.log(variaveis.aluno);

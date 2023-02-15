@@ -23,6 +23,13 @@ var usuario = {
     password:"",
 }
 
+var usuarioCorreto = {
+    username:"wallis.sl@outlook.com",
+    password:"1234",
+}
+
+
+
 
 // Pegando o meu usuario e senha dentro do Input:
 let user = document.getElementById("user");
@@ -51,6 +58,18 @@ password.addEventListener("change", handleChangePassword);
 
 
 // Modelo do alert utilizando Template String
-function clicou () {
-    alert(`O usuário que você digitou é: ${usuario.username}, logado \n A sua senha é: ${usuario.password}`);
+
+function confirmarSenha () {
+    if(usuario.username == usuarioCorreto.username && usuario.password == usuarioCorreto.password){
+        console.log("aí sim amigo");
+    }else {
+        console.log("errado")
+    }
 }
+
+function clicou () {
+
+    console.log(confirmarSenha());
+
+}
+    //alert(`O usuário que você digitou é: ${usuario.username}, logado \n A sua senha é: ${usuario.password}`);
