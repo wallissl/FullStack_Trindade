@@ -84,7 +84,7 @@ const carteiraTotal = carteiras.reduce((acumulador,valorAtual, indiceAtual, arra
 
 // MÓDULOS -- Utilizamos para poder importar e exportar conteúdos entre os nossos arquivos.
 
-import {aluno, boaNoite, meuNome} from './variables.js';
+/* import {aluno, boaNoite, meuNome} from './variables.js';
 
 import imprime from './variables.js';
 
@@ -97,4 +97,19 @@ imprime();
 
 import * as variaveis from "./variables.js"
 
-console.log(variaveis.aluno);
+console.log(variaveis.aluno); */
+
+
+
+// ---------------------  AULA 16/02/23 - M1S3A2 - TRABALHANDO COM PROMESSAS  ---------------------
+
+console.log("Hello");
+const somaDoisNumeros = (a,b) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve(a+b);
+        },2000)
+    });
+};
+
+somaDoisNumeros(3,1).then((soma) => console.log(soma));
