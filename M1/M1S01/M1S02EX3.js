@@ -80,3 +80,5 @@ function clicou () {
 } 
 
 localStorage.clear();
+
+// Finalizado
