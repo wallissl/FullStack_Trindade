@@ -61,15 +61,15 @@ password.addEventListener("change", handleChangePassword);
 
 function confirmarSenha () {
     if(usuario.username == usuarioCorreto.username && usuario.password == usuarioCorreto.password){
-        console.log("aí sim amigo");
+        alert ("Logado");
     }else {
-        console.log("errado")
+        alert("Credenciais incorretas")
     }
 }
 
 function clicou () {
 
-    console.log(confirmarSenha());
+    return (confirmarSenha());
 
 }
     //alert(`O usuário que você digitou é: ${usuario.username}, logado \n A sua senha é: ${usuario.password}`);
