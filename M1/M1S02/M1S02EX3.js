@@ -60,8 +60,6 @@ password.addEventListener("change", handleChangePassword);
 
 // Modelo do alert utilizando Template String
 
-
-
 function confirmarSenha () {
     if(usuario.username == usuarioCorreto.username && usuario.password == usuarioCorreto.password){
        localStorage.setItem(usuario.username,usuario.password);
