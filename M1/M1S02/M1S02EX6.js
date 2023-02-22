@@ -10,12 +10,23 @@ var usuario = {
     number:""
 }
 
+var numeroTabuada = 10;
+
 const handleChangeNumero = (e) => {
     usuario.number = e.target.value;
 }
 
 numeroUsuario.addEventListener("change", handleChangeNumero);
 
+//Função com laço for para realizar a tabuada
+function tabuada() {
+
+    for(i =1; i <= numeroTabuada; i++){
+        //console.log(usuario.number + " X " + i + " = " + (usuario.number * i));
+        console.log(`${usuario.number} X ${i} = ${usuario.number * i}`)
+    }
+}
+
 function clicou(){
-    console.log(usuario.number);
+    console.log(tabuada());
 }
