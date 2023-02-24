@@ -1,53 +1,66 @@
-const setPriceFromPrompt = (product) => {
-    let price = parseFloat(prompt(`Insira o preço do produto ${product}:`));
-    if (isNaN(price)) {
-      setPriceFromPrompt(product);
-    }
-  
-    return price;
-  };
-  
-  const setClientCashFromPrompt = (total) => {
-    let cash = parseFloat(
-      prompt(`Insira o valor em dinheiro que o cliente forneceu:`)
-    );
-    if (isNaN(cash)) {
-      setClientCashFromPrompt(total);
-    }
-    return cash;
-  };
-  
-  const inputPriceProduct = () => {
-    let product = 1;
-    let price = setPriceFromPrompt(product);
-    let total = 0;
-    let results = `### Lojas Tabajara ### \n`;
-    results += `========================= \n`;
-    while (price > 0) {
-      total += price;
-      results += `+ Produto ${product}: R$ ${price}\n`;
-      product += 1;
-      price = setPriceFromPrompt(product);
-    }
-  
-    alert("Final da compra");
-    let cash = setClientCashFromPrompt(total);
-    while (total > cash) {
-      cash = setClientCashFromPrompt(total);
-    }
-  
-    results += `========================= \n`;
-    results += `Total: R$ ${total}\n`;
-    results += `Dinheiro: R$ ${cash}\n`;
-    results += `Troco: R$ ${cash - total}\n`;
-    results += `========================= \n`;
-    alert(results);
-  };
-  
-  function padariaTechPlusInit() {
-    document.querySelector("#enviar").innerHTML = `
-          <button type="button" onclick="inputPriceProduct()">Caixa Registradora</button>
-          `;
+// prompt ("Digite um número");
+
+let iniciarCompra = document.getElementById("enviar");
+iniciarCompra.onclick = clicou;
+
+
+var number="";
+var somaNumero=0;
+var incremento =0;
+var valorDinheiro = 0;
+
+let valores = [];
+
+
+const handleChangeNumero = (e) => {
+    number = e.target.value;
+}
+
+iniciarCompra.addEventListener("change", handleChangeNumero);
+
+
+function vaiSomar(){      
+
+somaNumero = (somaNumero) + (number);
+
+console.log(number);
+
+}
+
+function clicou(){
+    
+  while(number !== 0 ){
+    number = parseFloat(prompt("Digite o valor da compra:").replace(',','.'));
+    vaiSomar();
+    incremento ++;
+    valores.push(number);
   }
+
+  valorDinheiro = parseFloat(prompt("Informe o valor total em dinheiro para o pagamento da compra:"))
+  while(valorDinheiro < somaNumero){
+  if(valorDinheiro < somaNumero){
+    console.log("Valor insuficiente para o pagamento");
+    valorDinheiro = parseFloat(prompt("Informe outro valor para pagamento em dinheiro"));
+  }
+}  
+
+  console.log("Lojas Tabajara");
   
-  padariaTechPlusInit();
+  for(i=0; i<valores.length -1; i++){
+  console.log( "Produto " + (i +1) + ": R$" + (valores[i]));
+  }
+
+  console.log("Total: R$ " + somaNumero);
+  console.log("Dinheiro pago: R$ " + valorDinheiro);
+  console.log("Troco: R$ " + ((valorDinheiro - somaNumero)));
+
+  // Resetar para valores padrão
+  number = "";
+  somaNumero=0;
+  incremento =0;
+  valorDinheiro = 0;
+  valores = [];
+
+}
+
+
