@@ -55,6 +55,7 @@ function clicou(){
   console.log("Troco: R$ " + ((valorDinheiro - somaNumero)));
 
   // Resetar para valores padrão
+  
   number = "";
   somaNumero=0;
   incremento =0;
@@ -62,5 +63,3 @@ function clicou(){
   valores = [];
 
 }
-
-
