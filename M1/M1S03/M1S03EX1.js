@@ -94,7 +94,7 @@ let lista = [{
 let enviar = document.getElementById("enviar");
 enviar.addEventListener('click', verificador);
 
-//Função para inserir os dados enviar em nomeUsuario e procurar os dados no Arrya, retornando se existe ou não o nome digitado na lista.
+// Função para inserir os dados enviar em nomeUsuario e procurar os dados no Arrya, retornando se existe ou não o nome digitado na lista.
 function verificador(){
     let nomeUsuario = document.getElementById('nomeUsuario').value;
     let buscar = lista.find(user => {
@@ -103,3 +103,5 @@ function verificador(){
 
 console.log(buscar)
 }
+
+// Fim do Exercício
