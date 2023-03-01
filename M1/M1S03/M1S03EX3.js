@@ -20,9 +20,9 @@ function buscar(){
         return tarefa === buscarTarefa;
     }) 
     if(buscar){
-    window.alert(buscar);
+    window.alert(buscar + " está na sua lista de tarefas.");
     }else {
-        window.alert("Não encontrado")
+        window.alert("Tarefa não está na sua lista de tarefas.")
     }
 }
 
