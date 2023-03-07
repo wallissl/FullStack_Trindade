@@ -101,6 +101,10 @@ console.log(variaveis.aluno); */
 
 
 
+/* tarefasDiarias.forEach(tarefas => {
+    console.log(tarefas);
+}); */
+
 // ---------------------  AULA 16/02/23 - M1S3A2 - TRABALHANDO COM PROMESSAS  ---------------------
 
 console.log("Hello");
