@@ -20,14 +20,14 @@
 // Comando que serve para você remover o último elemento do array
 //copa2026.pop();
 
-//console.log(copa2026);  */
+//console.log(copa2026);  
 
-/*  Exemplo do uso novamente do forEach
+ Exemplo do uso novamente do forEach
     copa2026.forEach( (time) => {
     console.log(time);
-}) */
+}) 
 
-/* // Pegando a lista criada em HTML
+ // Pegando a lista criada em HTML
 let list = document.getElementById("list");
 
 // Inserindo elementos dentro da lista
@@ -35,9 +35,9 @@ let list = document.getElementById("list");
     let li = document.createElement("li");
     li.innerText = time
     list.appendChild(li)
-});  */
+}); 
 
-/* //Transcrever array - Você pode criar uma nova lista através de uma já pronta alterando os valores
+//Transcrever array - Você pode criar uma nova lista através de uma já pronta alterando os valores
 const numeros = [1,2,3,4,5,6,7,8,9];
 const dobro = numeros.map( (numero) => {
     return numero *2;
@@ -103,7 +103,7 @@ console.log(variaveis.aluno); */
 
 /* tarefasDiarias.forEach(tarefas => {
     console.log(tarefas);
-}); */
+}); 
 
 // ---------------------  AULA 16/02/23 - M1S3A2 - TRABALHANDO COM PROMESSAS  ---------------------
 
@@ -116,4 +116,4 @@ const somaDoisNumeros = (a,b) => {
     });
 };
 
-somaDoisNumeros(3,1).then((soma) => console.log(soma));
+somaDoisNumeros(3,1).then((soma) => console.log(soma)); */
