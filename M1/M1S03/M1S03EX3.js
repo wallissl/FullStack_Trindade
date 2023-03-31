@@ -118,6 +118,6 @@ function ativar(){
     alterarItem();
     removeItem();
     adicionarItem();
-    apagaforms();
+    //apagaforms(); teste
 }
 
