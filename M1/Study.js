@@ -1,8 +1,8 @@
-// Módulo 01 - Semana 01 - Variáveis, operadores, estruturas relacionais e condicionais, function, GitHub, Scrum
+// Módulo 01 - Semana 01 - Variáveis, operadores, estruturas relacionais e condicionais, function, GitHub, Scrum.
 
 /*
 
-console.log("Hello World"); // Mensagem simples para imprimir no console
+console.log("Hello World"); // Mensagem simples para imprimir no console.
 
 var meuObjeto = {
     nome:'Wallis',
@@ -14,14 +14,14 @@ var meuObjeto = {
         cor: 'azul'
 
     }
-} // Criando um objeto e adicionando um objeto dentro dele
+} // Criando um objeto e adicionando um objeto dentro dele.
 
 console.log(meuObjeto.info.cor);
 
 var minhaLista = ['Wallis',30,'Manoel Cardoso de Abreu'];
 console.log(minhaLista[1]); // Criando um Array (lista)
 
-// É possível misturar listas com objetos
+// É possível misturar listas com objetos.
 var alunos = [{
     nome: 'Wallis',
     sala: 3,
@@ -90,11 +90,9 @@ return alert(parseInt(n1)+parseInt(n2))
 
 soma();
 
-*/
 
 
-
-//Módulo 01 - Semana 02 - Estrutura de repetição
+//Módulo 01 - Semana 02 - Estrutura de repetição.
 
 // Estruturas de repetição
 
@@ -108,13 +106,40 @@ numerosDaSorte = [7,8,9];
 
 for(var i=0; i<numerosDaSorte.length; i++){
     console.log('O número da sorte é: ' + numerosDaSorte[i]);
-} // For utilizado para percorrer uma arrei até que uma condição seja verdadeira e imprimir os itens
+} // For utilizado para percorrer uma arrei até que uma condição seja verdadeira e imprimir os itens.
 
 numerosDaSorte.forEach((numero)=>{
     console.log('Os números são:', numero);
-}) // ForEach, muito utilizado para simplificar o laço for tradicional, você pode percorrer uma array sem a necessidade de especificar o índice
+}) // ForEach, muito utilizado para simplificar o laço for tradicional, você pode percorrer uma array sem a necessidade de especificar o índice.
 
 
 
+// Exemplo de utilização do forEach para tirar uma média.
+const numeros = [10,10,10,10];
+let somaNumeros = 0;
+
+numeros.forEach((numero)=>{
+    somaNumeros = somaNumeros + numero;
+});
+
+const media = somaNumeros / numeros.length;
+console.log(media);
+
+
+
+var contador = 0;
+while(contador <5){
+    console.log('contador:', contador);
+    contador++
+} // Aqui temos o while, enquanto, serve para realizar uma determinada ação até que uma condição seja verdadeira.
+
+meuNumero = 0;
+do{
+    console.log('Aqui tem um laço com do: ' + meuNumero);
+    meuNumero++
+    
+}while(meuNumero <3) // Aqui temos um modelo utilizando o do while, que é executado ao menos uma vez antes de entrar na repetição.
+
+*/
 
 
