@@ -291,4 +291,66 @@ conjunto.clear(); // Limpar todo o Set
 
 console.log(conjunto)
 
+
+
+
+
+// SEMANA 03 - Funções de Array
+
+let copa22 = ['Brasil','Argentina','Itália','USA'];
+copa22.push("França"); // Push é utilizado para adicionar itens no final de um array
+copa22.unshift('Alemanha') // unshift é utilizado para adicionar itens no início de um array
+copa22.splice(3,0,'Equador') // Utilizado para indicar em qual posição você deseja adicionar uma informação em um array, se deseja excluir algo após a inserção e o dado que deve ser inserido.
+
+
+ copa22.forEach((e) => {
+    console.log(e)
+}) // Laço para verificar o exercício
+
+
+for(i=0; i<copa22.length; i++){
+    console.log(copa22[i])
+}
+
+
+
+// Inserindo informações de um array em uma lista HTMl 
+let copa22 = ['Brasil','Argentina','Itália','USA'];
+let list = document.getElementById('list');
+
+copa22.push('França'); // inserir uma nova informação na lista
+
+copa22.forEach((time) => {
+    let li = document.createElement("li"); // Criar um li dentro do html
+    li.innerText = time // Inserir a informação do meu array dentro do li
+    list.appendChild(li) // inserir no html a informação do li
+});
+
+console.log(copa22);
+
 */
+
+let numerosPares = [2,4,6,8,10];
+
+/* for(i=0; i<numerosPares.length;i++){
+    console.log(numerosPares[i]);
+}
+ */
+/* numerosPares.forEach((e)=> console.log(e)) // ForEach é utilizado para percorrer um array sem retornar nenhum valor. */
+
+let numerosParesMap = numerosPares.map((e)=>{
+    return e*2;
+}) // Map é importante e muito utilizado porque ele retorna os valores e com isso você pode alterar os valores de um array e armazenar em outra variável
+
+console.log(numerosParesMap);
+
+let numerosMenoresQueCinco = numerosPares.filter(e => {
+    return e < 6;
+}); // Filter é utilizado para filtramos números que são menores que a condição especificada.
+
+console.log(numerosMenoresQueCinco);
+
+let valoresMenoresQueDez = (currentValeu) => currentValeu <=10; // Forma de atribuir uma variável com valor booleano.
+
+console.log(numerosPares.every(valoresMenoresQueDez)); // Função para verificar se o Array é tem todas as condições previstas na variável definida ou não.
+
