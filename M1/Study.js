@@ -336,7 +336,7 @@ let numerosPares = [2,4,6,8,10];
     console.log(numerosPares[i]);
 }
  */
-/* numerosPares.forEach((e)=> console.log(e)) // ForEach é utilizado para percorrer um array sem retornar nenhum valor. */
+/* numerosPares.forEach((e)=> console.log(e)) // ForEach é utilizado para percorrer um array sem retornar nenhum valor. 
 
 let numerosParesMap = numerosPares.map((e)=>{
     return e*2;
@@ -350,7 +350,32 @@ let numerosMenoresQueCinco = numerosPares.filter(e => {
 
 console.log(numerosMenoresQueCinco);
 
+// every - Testar um array
 let valoresMenoresQueDez = (currentValeu) => currentValeu <=10; // Forma de atribuir uma variável com valor booleano.
 
 console.log(numerosPares.every(valoresMenoresQueDez)); // Função para verificar se o Array é tem todas as condições previstas na variável definida ou não.
 
+
+
+// Procurar em um array
+
+let pessoas = [{
+    nome:'Wallis',
+    idade:31},
+    {
+    nome:'Kami',
+    idade: 2},
+    {
+        nome:'Popo',
+        idade:1,
+        raca:'chato'
+    }
+]; // Array de objetos com informação
+
+let procurar = pessoas.find(procurar => {
+    return procurar.nome == "Kami";
+}) // Função para procurar uma informação e retornar um dado caso encontre
+
+console.log(procurar);
+
+*/
