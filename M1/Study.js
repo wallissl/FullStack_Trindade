@@ -295,7 +295,11 @@ console.log(conjunto)
 
 
 
-// SEMANA 03 - Funções de Array
+// SEMANA 03 - Funções de Array - Módulos
+
+
+
+
 
 let copa22 = ['Brasil','Argentina','Itália','USA'];
 copa22.push("França"); // Push é utilizado para adicionar itens no final de um array
@@ -328,7 +332,7 @@ copa22.forEach((time) => {
 
 console.log(copa22);
 
-*/
+
 
 let numerosPares = [2,4,6,8,10];
 
@@ -379,3 +383,21 @@ let procurar = pessoas.find(procurar => {
 console.log(procurar);
 
 */
+
+let testeReduce = [20,20,20,20,20];
+
+let boraReduce = testeReduce.reduce((total, quantidade) => total + quantidade);
+
+console.log(boraReduce); // Reduce simples utilizado para somar os números dentro de um array.
+
+let numeros = [ 10,7,5,2];
+
+let soma = numeros.reduce((total, quantidade, indice, array) => {
+    total += quantidade;
+    if(indice == array.length-1){
+        return total/array.length
+    }else {
+        return  total;
+    }
+})
+console.log(soma) // Aqui foi utilizado o reduce para poder realizar a soma do total e depois fazer uma validação para trazer a média, podemos colocar os parametros indice e array dentro do nosso reduce.
