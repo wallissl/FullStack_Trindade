@@ -382,7 +382,6 @@ let procurar = pessoas.find(procurar => {
 
 console.log(procurar);
 
-*/
 
 let testeReduce = [20,20,20,20,20];
 
@@ -401,3 +400,23 @@ let soma = numeros.reduce((total, quantidade, indice, array) => {
     }
 })
 console.log(soma) // Aqui foi utilizado o reduce para poder realizar a soma do total e depois fazer uma validação para trazer a média, podemos colocar os parametros indice e array dentro do nosso reduce.
+
+*/
+
+// Módulos - Trabalhamos com módulos para poder importar e exportar arquivos
+
+import {nome,imprime} from "./modulos.js"; // Utilizado para podermos importar um módulo criado e seus itens, é necessário acrescentar o type="module" no HTML
+import {meusItens}  from "./modulos.js";
+console.log(nome)
+imprime();
+
+for( var i=0; i<meusItens.length; i++){
+    console.log(meusItens[i])
+}
+
+import ola from "./modulos.js";
+console.log(ola) // Usando o método Default apenas uma vez para fazer uma importação.
+
+import * as nomePadrão from "./modulos.js"; // É possível utilizar o * para chamar todas as variáveis e outros dados, armazenar em outra variável a chamar os itens como se fosse de dentro de um objeto.
+
+console.log(nomePadrão.meusItens);
