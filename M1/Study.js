@@ -295,7 +295,7 @@ console.log(conjunto)
 
 
 
-// SEMANA 03 - Funções de Array - Módulos
+// SEMANA 03 - Funções de Array - Módulos - Assíncrono - JavaScript é Single thread: único fio, única linha, executa um comando por vez. - Função Sincrona retorna o resultado assim que o navegador puder, já a função assíncrona é retirada do fluxo normal de execução do JavaScript e aguarda a resolução da "Promise" para ser executada. Trabalhamos com uma pilha de execução e uma fila de callbacks - Pilha - Last In, First Out, último que entra é o primeiro que sai --- Fila - First In, First Out - Primeiro que entra é o primeiro que sai. Essas funções são chamadas de callback também. ---- Promises, Async / Await, Fetch
 
 
 
@@ -401,7 +401,7 @@ let soma = numeros.reduce((total, quantidade, indice, array) => {
 })
 console.log(soma) // Aqui foi utilizado o reduce para poder realizar a soma do total e depois fazer uma validação para trazer a média, podemos colocar os parametros indice e array dentro do nosso reduce.
 
-*/
+
 
 // Módulos - Trabalhamos com módulos para poder importar e exportar arquivos
 
@@ -420,3 +420,24 @@ console.log(ola) // Usando o método Default apenas uma vez para fazer uma impor
 import * as nomePadrão from "./modulos.js"; // É possível utilizar o * para chamar todas as variáveis e outros dados, armazenar em outra variável a chamar os itens como se fosse de dentro de um objeto.
 
 console.log(nomePadrão.meusItens);
+
+
+
+setTimeout(() => window.alert("Bem vindo!"),3000) // Aqui utilizaremos o setTimeout como uma função para adiar a execução de uma tarefa.
+
+*/
+
+function digaOlaPara(quem) {
+    console.log("Ola, " + quem + "!!");
+}
+
+setTimeout(() => digaOlaPara("Jhonatan"),0); // setTimeout, mesmo com o tempo zerado será mostrado após a informação que está em pilha ou seja a função digaOla.
+digaOlaPara("Michael");
+
+// Podemos utilizar a setInterval também, que chama uma função por indefinida vezes dentro de um intervalo determinado.
+
+//setInterval(()=>console.log(new Date().toLocaleString()),3000) // Exemplo da utilização do setInterval para mostrar a data e horário conforme a função de callback é executada.
+
+
+
+// PROMISE é um objeto especial que representa uma eventual conclusão ou falha de uma operação que foi postergada (operação assíncrona).
