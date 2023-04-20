@@ -425,7 +425,7 @@ console.log(nomePadrão.meusItens);
 
 setTimeout(() => window.alert("Bem vindo!"),3000) // Aqui utilizaremos o setTimeout como uma função para adiar a execução de uma tarefa.
 
-*/
+
 
 function digaOlaPara(quem) {
     console.log("Ola, " + quem + "!!");
@@ -441,3 +441,47 @@ digaOlaPara("Michael");
 
 
 // PROMISE é um objeto especial que representa uma eventual conclusão ou falha de uma operação que foi postergada (operação assíncrona).
+
+*/
+
+new Promise ((resolve,reject) => {
+    let deuCerto = true;
+
+    if(deuCerto){
+        resolve(console.log("A promessa deu certo"));
+    }else{
+        reject(console.log("A promessa deu errado"));
+    }
+}) // Nesta função utilizamos o resolve e o reject para trazer uma resposta ou outra caso a Promise tenha se efetivado ou não. Pode ter três estados diferentes pending (pendente), fulfilled (realizada), rejected(rejeitada)
+
+// Para capturarmos o valor resultante da promise, usamos um método da própria promise chamado then. Este método recebe dois argumentos: onResolve e onReject.
+
+const minhaPromise = () =>{
+    return Promise.resolve("Resolve promise");
+};
+
+minhaPromise().then((resultado) => console.log(resultado)); // Para capturarmos o valor resultante da promise, usamos um método da própria promise chamado then. Para as promises resolvidas com erro, usamos outro método, o catch. -- Os erros são propagados pelo encadeamento até encontrar a primeira função que os capture (catch ou o onReject do then).
+
+
+// As diretivas async e await sao funções assíncronas são simplificações de promises e tornam o código mais simples e fácil de ler e escrever. O modelo acima por exemplo pode ser simplificado.
+
+async function minhaFuncaoAsync() {
+    const resultado = await minhaPromise();
+    console.log("Async:", resultado);
+}
+
+minhaFuncaoAsync(); // Importante: quando iniciamos a declaração de uma função utilizando a palavra-chave async, transformamos o retorno desta função em uma promise.
+
+// FETCH - O método fetch é uma função do navegador utilizada para manipular requisições e respostas HTTP através de Promises. Quando criamos uma requisição HTTP com Fetch, recebemos como retorno uma Promise que será resolvida com um objeto Response. 
+
+//O resultado do tipo Response que é devolvido por uma Promise do fetch possui um método .json() que converte a informação desejada (que vem em formato ReadableStream) em um objeto JavaScript:
+
+//const result = fetch("./dados.json");
+//result
+//.then((data) => {
+//  return data.json();
+//})
+//.then((res) => console.log(res));   * EXEMPLO*/ 
+
+//*/
+
