@@ -500,6 +500,17 @@ somaDoisNumeros(3,1).then((s) => console.log(s));
 console.log('Executou uma promessa'); // Outro modelo de promessa com then
 
 
+const somaPmim = (a,b) => {
+    console.log("Bom dia!");
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(a + b);
+        }, 4000)
+    })
+} 
+
+somaPmim(4,5).then((s)=>{console.log(s)}) // Mais um exemplo da utilização de uma função assíncrona com promise.
+
 async function login(user,password){
     try {
         const verificador = await new Promise((resolve) =>{
