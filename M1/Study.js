@@ -442,7 +442,7 @@ digaOlaPara("Michael");
 
 // PROMISE é um objeto especial que representa uma eventual conclusão ou falha de uma operação que foi postergada (operação assíncrona).
 
-*/
+
 
 new Promise ((resolve,reject) => {
     let deuCerto = true;
@@ -481,7 +481,97 @@ minhaFuncaoAsync(); // Importante: quando iniciamos a declaração de uma funç�
 //.then((data) => {
 //  return data.json();
 //})
-//.then((res) => console.log(res));   * EXEMPLO*/ 
+//.then((res) => console.log(res)); // Exemplo
 
-//*/
+console.log('Executando uma promessa');
+const somaDoisNumeros = (a,b) => {
+    console.log('Executou');
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            if(a + b == 4){
+            resolve(a+b);
+            }else{
+                reject("A soma deu errado");
+            }
+        },3000);
+    });
+}
+somaDoisNumeros(3,1).then((s) => console.log(s));
+console.log('Executou uma promessa'); // Outro modelo de promessa com then
 
+
+async function login(user,password){
+    try {
+        const verificador = await new Promise((resolve) =>{
+            setTimeout(() => {
+            if (user == 'Wallis'){
+                resolve("usuario válido");
+            }else{
+                throw new Error('Usuario inválido');
+            }
+        },3000)
+        });
+        console.log(verificador)
+    }catch (e){
+        console.log(e)
+    }
+}
+
+login('Walli','1234'); // Utilizando um async para poder verificar um usuário depois de realizar uma verificação dentro de uma função.
+
+
+
+let variable = document.getElementById('root');
+
+async function login(user,password){
+    variable.innerText = 'Carregando..'
+    try {
+        const verificador = await new Promise((resolve) =>{
+            setTimeout(() => {
+            if (user == 'Wallis'){
+                resolve("Bem vindo Wallis");
+            }else{
+                throw new Error('Usuario inválido');
+            }
+        },3000)
+        });
+        console.log(verificador)
+
+        const verificaPassword = await new Promise((resolve)=>{
+            setTimeout(() => {
+                if(password == "1234"){
+                    resolve("Senha correta");
+                }else{
+                    throw new Error('Senha incorreta')
+                }
+            },3000)
+        });
+        console.log(verificaPassword)
+    }catch (e){
+        console.log(e)
+    } finally {
+        console.log('login terminou')
+        variable.innerText = `Bem vindo ${user}`
+    }
+}
+
+login('Wallis','1234') 
+
+*/
+
+async function buscaDados () {
+    try {
+        let dados = document.getElementById('root');
+        const response = await fetch('https://api.github.com/users/wallissl');
+        const body = await response.json()
+        console.log(body)
+        const dadosJSON = JSON.stringify(body.name) // Converter objeto para Json, você pode colocar o . e escolher o dado que deseja para filtrar
+        dados.innerText = dadosJSON;
+    } catch (e) {
+
+    }finally{
+
+    }
+}
+
+buscaDados() // Trazendo uma requisição do servidor do Git com async e await
