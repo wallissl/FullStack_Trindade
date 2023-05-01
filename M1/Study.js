@@ -568,7 +568,6 @@ async function login(user,password){
 
 login('Wallis','1234') 
 
-*/
 
 async function buscaDados () {
     try {
@@ -586,3 +585,22 @@ async function buscaDados () {
 }
 
 buscaDados() // Trazendo uma requisição do servidor do Git com async e await
+
+
+*/
+
+
+
+// SEMANA 04 - CLASSES 
+
+
+class Roupa {
+    constructor(cor,tamanho){
+        this.cor = cor
+        this.tamanho = tamanho
+    }
+}
+
+let roupaUm = new Roupa ('azul','M');
+
+console.log(roupaUm); // Sintaxe da criação de uma classe simples.
