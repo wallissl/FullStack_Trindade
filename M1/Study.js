@@ -594,13 +594,43 @@ buscaDados() // Trazendo uma requisição do servidor do Git com async e await
 // SEMANA 04 - CLASSES 
 
 
-class Roupa {
+ class Roupa {
     constructor(cor,tamanho){
         this.cor = cor
         this.tamanho = tamanho
-    }
+    } // Criação de propriedades
+
+    seuTamanho() {
+       return this.tamanho
+    } // Criação de método
 }
 
-let roupaUm = new Roupa ('azul','M');
+let roupaUm = new Roupa('azul','G'); // Sintaxe da criação de uma classe simples. 
+console.log(roupaUm.seuTamanho()) // Aqui eu posso chamar um método que existe dentro da minha classe.
 
-console.log(roupaUm); // Sintaxe da criação de uma classe simples.
+
+
+
+class Poligno {
+
+    constructor (altura, largura){
+        this.altura = altura;
+        this.largura = largura
+    }
+
+    get area () {
+        return this.#calcularArea ()
+    } // Get utilizado para retornar o calcularArea
+
+    set mudarLargura(num) {
+        this.largura = num
+    } // Set utilizado para alterar o valor de um dado dentro da minha classe
+
+    #calcularArea () {
+        return this.altura * this.largura
+    } // Este método recebe um # isso indica que ele não pode ser acessado fora da classe, ou seja é privado.
+}
+
+let polignoUm = new Poligno(50,60);
+polignoUm.mudarLargura=10;
+console.log(polignoUm.area) // Isso se chama encapsulamento, onde podemos bloquear e proteger algumas partes do nosso código
