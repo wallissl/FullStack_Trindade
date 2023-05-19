@@ -587,11 +587,11 @@ async function buscaDados () {
 buscaDados() // Trazendo uma requisição do servidor do Git com async e await
 
 
-*/
 
 
 
-// SEMANA 04 - CLASSES 
+
+// SEMANA 04 - CLASSES | ENCAPSULAMENTO | HERANÇA | POLIMORFISMO | ABSTRAÇÃO | MÉTODOS ESTÁTICOS
 
 
  class Roupa {
@@ -631,6 +631,147 @@ class Poligno {
     } // Este método recebe um # isso indica que ele não pode ser acessado fora da classe, ou seja é privado.
 }
 
-let polignoUm = new Poligno(50,60);
+let polignoUm = new Poligno(80,60);
 polignoUm.mudarLargura=10;
 console.log(polignoUm.area) // Isso se chama encapsulamento, onde podemos bloquear e proteger algumas partes do nosso código
+
+
+*/
+
+// Trabalhando com atributos e métodos;
+
+class Pessoa {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+    falar(){
+        console.log('Ola mundo!'); // Método
+    }
+}
+
+// let novaPessoa = new Pessoa('Wallis',31);
+
+// console.log(novaPessoa.falar()); 
+
+class Professor extends Pessoa {
+    constructor(nome,idade,materia){
+        super(nome,idade);
+        this.materia = materia;
+    }
+
+    darAula(){
+        console.log('Agora vamos dar aula de ' + this.materia)
+    }
+}
+
+const wallis = new Professor('Wallis', 31,"Programação" )
+console.log("Olá eu me chamo " + wallis.nome + ', eu tenho ' + wallis.idade + ' anos')
+wallis.darAula();
+
+
+// Polimorfismo - Quando um objeto se estende de outro objeto reescrevendo algumas características
+
+class Atleta {
+    peso; // Atributos
+    categoria;
+    constructor(peso){
+        this.peso = peso; 
+    } // Aqui temos o construtor que é necessário para referenciar o que será instanciado da classe
+
+    definirCategoria(){
+        if (this.peso <=50){
+            this.categoria = 'Infantil';
+        }else if (this.peso <= 65){
+            this.categoria = 'Juvenil';
+        }else{
+            this.categoria = 'Adulto'
+        }
+    } // Instanciando um método
+}
+
+class Lutador extends Atleta{
+    constructor(peso){
+        super(peso);
+    } // Instanciando uma nova classe herdando características de outra classe, Polimorfismo.
+    definirCategoria(){
+        if (this.peso <=50){
+            this.categoria = 'Pluma';
+        }else if (this.peso <= 65){
+            this.categoria = 'Leve';
+        }else{
+            this.categoria = 'Pesado'
+        }
+    }
+}
+
+const joao = new Lutador(80)
+joao.definirCategoria()
+console.log(joao.peso + ' ' + joao.categoria)
+
+
+// Abstração - Template ou identidade de uma classe que será construída no futuro, atributos e métodos podem ser criados na casse de abstração (superclasse). A implementação dos métodos e atributos só poderá ser feita na classe que irá herdar essa abstração
+
+class Parafuso {
+    constructor(){
+        // this.nome = nome;
+        if(this.constructor === Parafuso){
+            throw new Error('Classe abstrata, não pode ser instanciada');
+        }
+    }
+    get tipo() {
+        throw new Error("Método abstrato, precisa ser implementado")
+    }
+}
+
+class Fenda extends Parafuso{
+    constructor() {
+        super()
+    }
+
+    get tipo(){
+        return 'Fenda'
+    }
+}
+
+class Philips extends Parafuso{
+    constructor(){
+        super()
+    }
+    get tipo(){
+        return 'Philips'
+    }
+}
+
+class Allen extends Parafuso{
+    constructor(){
+        super()
+    }
+    get tipo(){
+        return 'Allen'
+    }
+}
+
+const allen = new Allen("Wallis")
+console.log(allen.tipo);
+
+// Métodos estáticos - Definido em uma classe usando a palavra-chave static, ele não pode ser acessado por qualquer um dos objetos instanciados da classe; Não pode ser acessado pelo objeto, apenas pela própria classe; O método estático só pode ser acessado usando o nome da classe porque ele pertence diretamenta à classe.
+
+class Tipo {
+    constructor (altura, largura){
+        this.altura = altura
+        this.largura = largura
+    }
+    static multiply (altura, largura){
+        this.altura = altura
+        this.largura = largura
+        return this.altura * this.largura
+    }
+}
+
+const mult = new Tipo;
+console.log(Tipo.multiply(2,2))
+
+
+
+// S4A3 - 01:40 -- 20/04 S12A4
