@@ -636,7 +636,7 @@ polignoUm.mudarLargura=10;
 console.log(polignoUm.area) // Isso se chama encapsulamento, onde podemos bloquear e proteger algumas partes do nosso código
 
 
-*/
+
 
 // Trabalhando com atributos e métodos;
 
@@ -770,8 +770,29 @@ class Tipo {
 }
 
 const mult = new Tipo;
-console.log(Tipo.multiply(2,2))
+console.log(Tipo.multiply(2,9));
 
 
+class Homem {
+    constructor (nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+   static andar(){
+        return 'Andando...'
+    }
+}
 
-// S4A3 - 01:40 -- 20/04 S12A4
+
+const pessoa = new Homem;
+pessoa.andar();
+console.log(pessoa.andar) 
+
+
+console.log(Homem.andar())
+
+
+*/
+
+// S5A1 - 00:00 -- 20/04 S12A4
+
