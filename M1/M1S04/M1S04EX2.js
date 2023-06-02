@@ -11,22 +11,21 @@ class Conta {
     constructor(){
         this.#saldo = 10;
         this.#senha = 1234;
-    }
+    } // Inserimos o # para informar que o atributo é privado.
 
     get meuSaldo (){
         return this.#saldo;
-    }
+    } // Get serve para pegarmos uma informação de dentro de uma classe.
 
     get minhaSenha() {
         return this.#senha;
-    }
+    } 
 
     deposito (valor) {
         const valorDepositado = this.#saldo + valor;
         return valorDepositado;
 
     }
-
 }
 
 let contaCorrente = new Conta;
@@ -39,12 +38,24 @@ switch(opUsuario){
         if(p1==contaCorrente.minhaSenha){
             let s1 = prompt('Informe o valor que deseja depositar');
             console.log(`Deposito realizado com sucesso\nSeu novo saldo é de R$${contaCorrente.deposito(parseInt(s1))}`)
+        }else{
+            alert("Senha incorreta!")
         }
     break;
     case '2':
-        console.log('ola');
+        let p2 = prompt('Informe a senha');
+        if(p2 ==contaCorrente.minhaSenha){
+            let v1 = prompt('Informe o valor que deseja retirar:');
+            if(v1 < contaCorrente.meuSaldo){
+                alert(`Saque realizado com sucesso\nSaldo atual da conta é: R$${contaCorrente.meuSaldo - v1}`)
+            }else{
+                alert("Saldo insuficiente!!!")
+            }
+        }else{
+            alert("Senha incorreta")
+        }
+
     break;
     default:
         console.log('Digite 1 ou 2')
 }
-
