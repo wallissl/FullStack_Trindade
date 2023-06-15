@@ -795,4 +795,3 @@ console.log(Homem.andar())
 */
 
 // S5A1 - 00:00 -- 20/04 S12A4
-

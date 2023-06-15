@@ -1,9 +1,5 @@
 /* Agora o banco quer criar uma nova classe chamada ContaPoupança. A conta poupança tem todos os métodos e atributos da classe Conta (herança). Porém, essa nova classe deve ter um novo método chamado atualizaJuros. Esse método deve pegar o valor do saldo e adicionar um ganho baseado em um índice de índice de 0.7% todas as vezes que for chamado. */
 
-
-console.log('Hello World');
-
-
 class Conta {
     #saldo;
     #senha;
@@ -36,12 +32,12 @@ class ContaPoupanca extends Conta {
         this.banco = 'Meu banco';
     }
     
-    atualizarJuros(numero){
+    async atualizarJuros(numero){
         numero = numero * 0.007;
-        let juros = this.meuSaldo * numero + this.meuSaldo;
+        let juros = await this.meuSaldo * numero + this.meuSaldo;
         
         
-        return(console.log(juros))
+       return(console.log(juros))
         
     }    
     
@@ -49,5 +45,20 @@ class ContaPoupanca extends Conta {
 
 let teste = new ContaPoupanca;
 
+/* 
+// Outra forma:
+
+let deseja = ''
+let boraSomar = 0
+while(deseja!='n'){
+        
+    deseja = prompt ("Deseja continuar somando?(Digite 's' para sim ou 'n' para não)");
+    if(deseja != 'n'){
+        boraSomar++;
+    }
+}
+
+teste.atualizarJuros(boraSomar); */
+
 teste.atualizarJuros(1);
-teste.atualizarJuros(2);
+teste.atualizarJuros(2); 
