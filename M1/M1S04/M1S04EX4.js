@@ -1,9 +1,8 @@
-// Agora o banco inventou de criar um novo tipo de poupança, chamada poupancaPremium, que contém uma taxa de juros melhor. Crie uma classe que herde atributos e métodos da classe poupanca criada anteriormente e modifique o método atualizaJuros (polimorfismo), aumentando o a taxa para 1.2% toda a vez que o método for chamado.
+// Agora o banco inventou de criar um novo tipo de poupança, chamada poupancaPremium, que contém uma taxa de juros melhor. Crie uma classe que herde atributos e métodos da classe poupanca criada anteriormente e modifique o método atualizaJuros (polimorfismo), aumentando a taxa para 1.2% toda a vez que o método for chamado.
 
 class Conta {
     #saldo;
-    #senha;
-    
+    #senha;    
 
     constructor(){
         this.#senha = 1234;
@@ -37,8 +36,7 @@ class ContaPoupanca extends Conta {
         let juros = this.meuSaldo * numero + this.meuSaldo;
         
         
-        return(console.log(juros))
-        
+        return(console.log(juros))        
     }    
     
 }
@@ -49,8 +47,9 @@ class poupancaPremium extends ContaPoupanca{
         super(saldo);
     }
 
-    atualizarJuros(){
-        console.log(this.meuSaldo)
+    atualizarJuros(numero){
+        numero = ((this.meuSaldo * 0.012) * numero) + this.meuSaldo;
+        console.log(numero)
     }
 
 }
@@ -61,4 +60,5 @@ teste.atualizarJuros(1);
 
 let teste2 = new poupancaPremium;
 
-teste2.atualizarJuros();
+teste2.atualizarJuros(1);
+teste2.atualizarJuros(2);
