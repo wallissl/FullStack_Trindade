@@ -26,11 +26,11 @@ class Profissional extends Person {
     }
 }
 
-let ap = new Person ('Wallis','31','1,65 m','oiio');
+let ap = new Person ('Wallis','31','1,65 m');
 
 ap.apresentar();
 
-let ap2 = new Profissional ('Wallis','31','1,65','Designer')
+let ap2 = new Profissional ('Wallis','31','1,65 m','Designer')
 
 ap2.apresentar();
 
