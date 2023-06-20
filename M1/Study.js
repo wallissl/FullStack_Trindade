@@ -799,4 +799,57 @@ console.log(Homem.andar())
 
 
 
-// S5A1 - 07:43 -- 15/05 S2A1
+
+
+/* const carros = {
+    "motor" : "V8",
+    "Preço" : 'R$ 56.000,00'
+}
+delete carros.motor // Existe uma função chamada delete dentro do Javascript que é utilizada para apagar informações de dentro de um objeto.
+console.log(carros) 
+
+const carros = ["Uno","Argo"]
+
+const existeCarro = carros.includes("Uno") // includes, utilizado para vefificar se existe um determinado dado dentro de um array | É possível utilizar também para procurar partes de palavras dentro de uma String.
+console.log(existeCarro) 
+
+// Expressão Regular ou Regex é utilizada para encontrar padrões em uma string
+
+// for (let i = 1; i <5; i++) { if (i === 3) coninue; console.log(i); } | Essa expressão é utilizada para ignorar o 3 (nesse caso) utilizando o continue.
+
+// .trim() é utilizado para remover espaços indesejados nas strings, ele tira exemplo o primeiro e o último espaço que vc colocou em um texto | Você também pode utilizar o replaceAll(" ",1) no caso da amostra o primeiro argumento é informando o que eu gostaria de substituir e o segundo é o pelo que. 
+
+// Uma curiosidade, é possível acessar informações da chave de um objeto com outra chave (Chave dinâmica):
+
+const magmar = {
+    tipo: "fogo"
+}
+
+const pokemon = {
+    nome: "Charmander",
+    fogo: "Pokemon de Fogo"
+}
+
+console.log(pokemon[magmar["tipo"]]);
+
+// mui.com utilizado para trabalhar com API no frontend
+*/
+
+// API e NODE | NPM é um gerenciador de pacotes do Node
+// Comando para iniciar um projeto npm init -y (Esse comando gera um arquivo para o usuário - package.json - Serve para fazer o gerenciamento das bibliotecas)
+
+/* {
+    "name": "testenode", // Nome do projeto
+    "version": "0.0.0", // da direita para esquerda o primeiro correçaõ de bug simples que vai subindo, o segundo número é referente a um bug urgente ou nova funcionalidade que estamos trabalhando (nesse caso sobe um número e zera o antecessor o primeiro é para grandes mudanças - exemplo uma refaturação para uma nova linguagem e zera os antecessores)
+    "description": "", // Aqui vai a descrição
+    "main": "index.js", // Aqui é o arquivo padrão principal, index é o padrão.
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1" // Aqui você pode inserir os comandos que serão executados, a palavra chave para rodar os script é: npm run test (nome do comando que estiver no script)
+    },
+    "keywords": [], // Palavras chave.
+    "author": "", // Quem está fazendo o projeto, também é possível colocar uma String com várias pessoas.
+    "license": "ISC" // O Node é open source, porém dependendo da aplicação você pode inserir uma licença.
+  } */
+
+// S5A2 - 00:00 -- 12/06 S7A1
+
