@@ -798,7 +798,7 @@ console.log(Homem.andar())
 // SEMANA 05 - API E NODEJS / PACKAGE MANAGER / FRAMEWORKS (EXPRESS.JS E NEST.JS / ARQUIVOS ESTÁTICOS)
 
 
-
+// AULA 01 - REVISÃO JAVASCRIPT
 
 
 /* const carros = {
@@ -851,5 +851,39 @@ console.log(pokemon[magmar["tipo"]]);
     "license": "ISC" // O Node é open source, porém dependendo da aplicação você pode inserir uma licença.
   } */
 
-// S5A2 - 00:00 -- 12/06 S7A1
+// AULA 02 - RESOLUÇÃO DE EXERCÍCIOS - JAVASCRIPT
+
+// 1 - Trocar posição de item na lista - Utilizando a lista: ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"] - Troque as posições baseado nas regras abaixo: 
+// 1 - Defina a posição inical e a posição final que quer trocar;
+// 2 - Se for enviado uma posição que não existe na lista, retorne uma mensagem de erro;
+// 3 - Caso seja possível a troca, utilize o console.log para exibir a lista reordenada.
+
+function trocaPosicao(inicial,final){
+    const lista = ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"];
+
+    const novaLista = []
+
+    for(let i=0; i < lista.length; i++){
+        if(i === inicial){
+            novaLista.push(lista[final])   
+            continue; // Utilizado para realizar o if e após isso avançar.
+        }
+
+        if(i === final){
+            novaLista.push(lista[inicial])   
+            continue;   
+        }
+
+        novaLista.push(lista[i]);            
+    }
+    console.log(novaLista)  
+}
+
+trocaPosicao(0,2);
+
+
+
+// S5A2 - 01:00 -- 12/06 S7A1
+
+
 
