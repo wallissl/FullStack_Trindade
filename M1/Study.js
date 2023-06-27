@@ -849,7 +849,7 @@ console.log(pokemon[magmar["tipo"]]);
     "keywords": [], // Palavras chave.
     "author": "", // Quem está fazendo o projeto, também é possível colocar uma String com várias pessoas.
     "license": "ISC" // O Node é open source, porém dependendo da aplicação você pode inserir uma licença.
-  } */
+  } 
 
 // AULA 02 - RESOLUÇÃO DE EXERCÍCIOS - JAVASCRIPT
 
@@ -861,11 +861,15 @@ console.log(pokemon[magmar["tipo"]]);
 function trocaPosicao(inicial,final){
     const lista = ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"];
 
-    const novaLista = []
+    const novaLista = [] // Lista vazia
+
+    if(typeof inicial != 'number' || typeof final != 'number'){
+        return console.log("Não é um número")
+    } // Typeof é utilizado para verificar um tipo de variável
 
     for(let i=0; i < lista.length; i++){
         if(i === inicial){
-            novaLista.push(lista[final])   
+            novaLista.push(lista[final]) // Inserir informação na nova lista.
             continue; // Utilizado para realizar o if e após isso avançar.
         }
 
@@ -877,13 +881,49 @@ function trocaPosicao(inicial,final){
         novaLista.push(lista[i]);            
     }
     console.log(novaLista)  
-}
+} 
 
-trocaPosicao(0,2);
+trocaPosicao(5,0); 
+
+// Outra forma 
+
+const lista = ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"];
+const novaLista = [];
+
+function trocaPosicao(inicial,final){
+    if(inicial >= lista.length || final >= lista.length){
+        console.log("Erro: posicao inválida na lista");
+        return;
+    }
+    for(let i=0; i < lista.length; i++){
+        if (i === inicial){
+            novaLista.push(lista[final]);
+        }else if (i === final){
+            novaLista.push(lista[inicial])
+        }else{
+            novaLista.push(lista[i]);
+        }
+    }
+
+    console.log(novaLista)
+} 
+
+trocaPosicao(3,8) */
+
+// Mais uma forma
+
+function trocaPosicao(inicial,final){
+    const lista = ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"];
+
+    const novaLista = [] // Lista vazia
+
+    if(typeof inicial != 'number' || typeof final != 'number'){
+        return console.log("Não é um número")
+    } // Typeof é utilizado para verificar um tipo de variável
+
+    
+    console.log(novaLista)  
+} 
 
 
-
-// S5A2 - 01:00 -- 12/06 S7A1
-
-
-
+// S5A2 - 01:48 -- 12/06 S7A1
