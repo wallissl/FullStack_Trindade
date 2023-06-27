@@ -885,7 +885,7 @@ function trocaPosicao(inicial,final){
 
 trocaPosicao(5,0); 
 
-// Outra forma 
+// Outra forma gpt
 
 const lista = ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"];
 const novaLista = [];
@@ -910,20 +910,28 @@ function trocaPosicao(inicial,final){
 
 trocaPosicao(3,8) */
 
-// Mais uma forma
+// Mais uma forma 
 
 function trocaPosicao(inicial,final){
     const lista = ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"];
 
-    const novaLista = [] // Lista vazia
+    // const novaLista = [] // Lista vazia
 
     if(typeof inicial != 'number' || typeof final != 'number'){
         return console.log("Não é um número")
     } // Typeof é utilizado para verificar um tipo de variável
 
+    const novaLista = lista.map((_, index) => {
+         if(index === inicial) return lista[final]
+         if(index === final) return lista[inicial]
+         return lista[index]
+
+    }) // utiliza-se do _ para informar que não deseja utilizar nenhum parâmetro no código.
+
     
     console.log(novaLista)  
 } 
 
+trocaPosicao(0,2)
 
 // S5A2 - 01:48 -- 12/06 S7A1
