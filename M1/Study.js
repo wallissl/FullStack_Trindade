@@ -908,7 +908,7 @@ function trocaPosicao(inicial,final){
     console.log(novaLista)
 } 
 
-trocaPosicao(3,8) */
+trocaPosicao(3,8) 
 
 // Mais uma forma 
 
@@ -932,6 +932,25 @@ function trocaPosicao(inicial,final){
     console.log(novaLista)  
 } 
 
-trocaPosicao(0,2)
+trocaPosicao(0,2) */
 
-// S5A2 - 01:48 -- 12/06 S7A1
+// EX2 
+/* Busca por usuário na lista - Utilizando a lista ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"] - Retorne o usuário solicitado de acordo com as regras abaixo: 
+Regra 1 - Envie o nome do usuário que está procurando;
+Regra 2 - Se existir aquele usuário na lista, utilize o console.log para exibir o usuário como string e o restante da lista separado. Exemplo: "Pedro",["José","Aderbal","Danilo","Luisa","Vitória"];
+Regra 3 - Caso o nome informado for inválido, retorne uma mensagem de erro. */
+
+
+function procurarUsuario(nome){
+    const lista = ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"];
+     if(!lista.includes(nome)){ // Utilizado para verificar se uma condição existe em uma lista.
+        return console.log(`O valor enviado "${nome}", não costa na lista!`)
+    } 
+
+    const restanteDaLista = lista.filter((e) => e != nome);
+    console.log(nome, restanteDaLista)
+}
+
+procurarUsuario('Aderbal')
+
+// S5A2 - 02:40 -- 12/06 S7A1
