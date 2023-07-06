@@ -940,17 +940,30 @@ Regra 1 - Envie o nome do usuário que está procurando;
 Regra 2 - Se existir aquele usuário na lista, utilize o console.log para exibir o usuário como string e o restante da lista separado. Exemplo: "Pedro",["José","Aderbal","Danilo","Luisa","Vitória"];
 Regra 3 - Caso o nome informado for inválido, retorne uma mensagem de erro. */
 
-
-function procurarUsuario(nome){
+/* function procurarUsuario(nome){
     const lista = ["Pedro","José","Aderbal","Danilo","Luisa","Vitória"];
+    
      if(!lista.includes(nome)){ // Utilizado para verificar se uma condição existe em uma lista.
-        return console.log(`O valor enviado "${nome}", não costa na lista!`)
-    } 
+        return console.log(`O valor enviado "${nome}", não costa na lista!`);
+    }
 
-    const restanteDaLista = lista.filter((e) => e != nome);
+    const restanteDaLista = lista.filter((e) => e != nome); 
+
+    // Outra forma:
+     const restanteDaLista = []
+    var i = 0;
+    for(i; i <lista.length; i++){
+        if(lista[i] != nome){
+            restanteDaLista.push(lista[i])
+            
+        }        
+    }
+    if(restanteDaLista.length == lista.length) {
+        return console.log('O valor não foi encontrado na lista')
+    }        
+    
     console.log(nome, restanteDaLista)
 }
+procurarUsuario("Luisa") */
 
-procurarUsuario('Aderbal')
-
-// S5A2 - 02:40 -- 12/06 S7A1
+// S5A3 - 00:00 -- 19/06 S8A1 
