@@ -966,4 +966,11 @@ Regra 3 - Caso o nome informado for inválido, retorne uma mensagem de erro. */
 }
 procurarUsuario("Luisa") */
 
-// S6A1 - 00:00 -- 10/07 S11A1 
+
+//SEMANA 06 M1
+
+//Fluxo de informações na internet - Estruturas backend - Express js - Estrutura backend com express - Middleware
+// Requisição são informações que serão solicitadas (geralmente para o meu servidor)
+
+// S6A1 - 00:00 -- 10/07 S11A1 // 
+//Aqui tem um teste de ignore
