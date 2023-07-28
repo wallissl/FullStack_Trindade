@@ -973,4 +973,4 @@ procurarUsuario("Luisa") */
 // Requisição são informações que serão solicitadas (geralmente para o meu servidor)
 
 // S6A1 - 00:00 -- 10/07 S11A1 // 
-//Aqui tem um teste de ignore
+//Aqui tem um teste de ignore - foi
