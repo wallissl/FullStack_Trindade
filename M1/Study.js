@@ -972,5 +972,10 @@ procurarUsuario("Luisa") */
 //Fluxo de informações na internet - Estruturas backend - Express js - Estrutura backend com express - Middleware
 // Requisição são informações que serão solicitadas (geralmente para o meu servidor)
 
-// S6A1 - 00:00 -- 10/07 S11A1 // 
-//Aqui tem um teste de ignore - foi
+
+// npm install - Instalar o package.json
+// npm instal express --save -- Instalar o express
+// Extensão legal para icones - Material Icon
+
+// S6A2 - 00:00 -- 17/07 S12A1 //
+// S2A2 - 42:00
