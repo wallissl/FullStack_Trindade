@@ -44,9 +44,7 @@ function enviarFormulario(event){
         nome: nome,
         email: email,
         mensagem: mensagem
-    }    */
+    }    */ // Caso queira transformar as informações em um objeto
 }
-
-
 
 // S3A1 02:22
