@@ -36,16 +36,15 @@ function enviarFormulario(event){
     var email = document.getElementById('email').value;
     var mensagem = document.getElementById('mensagem').value;
 
-    console.log('Nome',nome);
-    console.log('Email', email);
-    console.log('Mensagem',mensagem);
+    console.log('Nome: ',nome);
+    console.log('Email: ', email);
+    console.log('Mensagem: ',mensagem);
 
-    const usuario = {
+   /*  const usuario = {
         nome: nome,
         email: email,
         mensagem: mensagem
-    }
-    
+    }    */
 }
 
 
