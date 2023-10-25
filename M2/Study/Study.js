@@ -22,28 +22,34 @@
 
     // Outra forma é você adicionar o evento a variável e chamar a função 'oi' fora da função addEventListener
     // button.addEventListener('click', oi);
-        */
+        
+
     function oi(){
-    console.log('Você clicou')
-    }  
+        console.log('Você clicou')
+    } 
+*/
  
 // Forms S2A4
 
 function enviarFormulario(event){
-    event.preventDefault(); // Evitar o comportamento padrão do forms
+    event.preventDefault(); // Evitar o comportamento padrão do forms que tenta encontrar um metodo de envio e uma ação - get post e mostra as informações enviadas na url.
+
+    // Pegar o valor digitado nos campos do formulário (html)
     var nome = document.getElementById('nome').value;
     var email = document.getElementById('email').value;
     var mensagem = document.getElementById('mensagem').value;
 
+    // Mensagem para imprimir
     console.log('Nome: ',nome);
     console.log('Email: ', email);
     console.log('Mensagem: ',mensagem);
 
+    // Caso queira atribuir as informações em um objeto.
    /*  const usuario = {
         nome: nome,
         email: email,
         mensagem: mensagem
-    }    */ // Caso queira transformar as informações em um objeto
+    }    */ 
 }
 
 // S3A1 02:22
