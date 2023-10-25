@@ -9,8 +9,6 @@
     document.querySelectorAll(".") // Pegar vários itens
 */
 
-//-----------------------------------------------------------
-
 //Aqui temos um exemplo de como referênciar o ID que está no HTML para executar uma função ou apenas instânciar a função "oi" referênciando dentro do próprio HTML para realizar a ação do evento que está no javascript: 
 
 /* 
@@ -29,7 +27,8 @@
     } 
 */
  
-// Forms S2A4
+/* 
+// Forms S2A4 - Aqui vamos capturar os dados enviados pelos campos do formulário através da função 'enviarFormulario'
 
 function enviarFormulario(event){
     event.preventDefault(); // Evitar o comportamento padrão do forms que tenta encontrar um metodo de envio e uma ação - get post e mostra as informações enviadas na url.
@@ -45,11 +44,43 @@ function enviarFormulario(event){
     console.log('Mensagem: ',mensagem);
 
     // Caso queira atribuir as informações em um objeto.
-   /*  const usuario = {
+        const usuario = {
         nome: nome,
         email: email,
         mensagem: mensagem
-    }    */ 
+    }   
+} */
+
+// -------------------------------------------------------------
+
+//  S3A1 - Trabalhando mais com eventos
+
+/*
+
+// Podemos utilizar um contador para veficiar quantas vezes as teclas foram pressionadas.
+let contador =0;
+function verificarTecla(e){
+    console.log(e)
+    contador += 1;
+    console.log(contador) 
+} */
+
+// Trabalhando com Arrow function
+
+/*
+let botao = document.getElementById('btnEntrar');
+
+botao.addEventListener('click', ()=> {
+    console.log('Você clicou') // Essa função que é acionada após o click é chamada de callback
+}) */
+
+// Agora um exemplo da função sendo trabalhada de forma normal
+
+document.addEventListener('click',voceClicou) // Nesse caso estou chamando qualquer click que houver o document
+
+function voceClicou(){
+    console.log('Você clicou')  
 }
+
 
 // S3A1 02:22
