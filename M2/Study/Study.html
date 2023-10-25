@@ -6,17 +6,19 @@
     <title>S2A4</title>
 </head>
 
-<!-- S2A4 - Dentro do body
-  
-        Forma de chamar uma ação direto no html 
-        <button id="meuButton" onclick="oi()">Enviar</button>
-
-        instanciando com o js
-        <button id="meuOutroButton">Enviar</button>
--->
-
-
 <body>
+
+     <!-- INÍCIO DOS ESTUDOS EM HTML - M2 S2A4 - Botão simples que pode ter uma Id para chamar um evento no         Javascript ou chamar a ação no próprio html -->
+
+    <!-- Forma de chamar uma ação direto no html 
+    <button id="meuButton" onclick="oi()">Enviar</button> --> 
+
+        
+    <!-- Instanciando com o js, utilizando apenas o ID 
+    <button id="meuOutroButton">Enviar</button> -->
+    
+    
+    <!-- Forms S2A4 -->
 
     <form id="meuform">
         <label for="nome">Nome:</label>
@@ -28,6 +30,7 @@
         <label for="mensagem">Mensagem:</label>
         <textarea id="mensagem" name="mensagem" required></textarea>
 
+        <!-- Criar evento onclick que chama a função 'enviar formulário' no javascript quando usuário clicar em enviar-->
         <button type="submit" onclick="enviarFormulario(event)">Enviar</button>
     </form>
 
