@@ -19,6 +19,6 @@ enviar.addEventListener("click",clicou);  */
 } */
 
 
-// Forma caso queira chamar a função direto pelo JavaScript
+// Forma caso queira chamar a função direto pelo JaexitvaScript
 /* const formLogin = document.getElementById("formLogin");
 formLogin.addEventListener('submit', processarLogin) */

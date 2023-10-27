@@ -17,6 +17,15 @@ section{
 
 form{
     width:600px;
+  
+    flex-direction: column;
+}
+
+fieldset{
+    height: 300px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
