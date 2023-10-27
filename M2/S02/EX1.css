@@ -11,5 +11,12 @@ section{
     height:711px;
     width:600px;
     background:#fff;
-    
+    border-radius: 10px;
+    display: flex;
+}
+
+form{
+    width:600px;
+    display: flex;
+    flex-direction: column;
 }
