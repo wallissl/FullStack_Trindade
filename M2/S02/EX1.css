@@ -8,11 +8,12 @@ body {
 }
 
 section{
-    height:711px;
+    height:620px;
     width:600px;
     background:#fff;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 form{
@@ -22,10 +23,56 @@ form{
 }
 
 fieldset{
-    height: 300px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
 
+h2 {
+    color:#000;
+    font-family: arial;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+p{
+    color: #B4B6C1;
+    font-family: arial;
+    font-size: 20px;
+
+}
+
+fieldset input,button{
+    border: solid 1px #EBF0FA;
+    padding: 15px;
+    width: 390px;
+    border-radius: 10px;    
+}
+
+.btn{
+    color: #fff;
+    background: #00A335;
+    font-size: 30px;
+    font-family: arial;
+    font-weight: 600;
+    margin-top:35px;
+}
+
+::placeholder{
+    color:#BCBCBC;
+    padding: 0px 0 0 30px;
+
+}
+
+span{
+    
+    text-align: center;
+    padding: 13px;
+}
+
+.doTopo{
+    margin-top:30px;
 }
