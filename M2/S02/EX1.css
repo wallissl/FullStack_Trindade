@@ -1,5 +1,10 @@
+:root {
+    --link-color: #00A335;
+    --color-gray: #B4B6C1;
+}
+
 body {
-    background:#B4B6C1;
+    background:#EBF0FA;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +13,7 @@ body {
 }
 
 section{
-    height:620px;
+    height:430px;
     width:600px;
     background:#fff;
     border-radius: 10px;
@@ -23,11 +28,24 @@ form{
 }
 
 fieldset{
-    height: 240px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    border: none;
+}
+
+.dados{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 h2 {
@@ -35,11 +53,12 @@ h2 {
     font-family: arial;
     font-size: 30px;
     font-weight: 600;
+    margin: 55px 0 5px 0;
 
 }
 
 p{
-    color: #B4B6C1;
+    color: var(--color-gray);
     font-family: arial;
     font-size: 20px;
 
@@ -47,7 +66,7 @@ p{
 
 fieldset input,button{
     border: solid 1px #EBF0FA;
-    padding: 15px;
+    padding: 14px;
     width: 390px;
     border-radius: 10px;    
 }
@@ -71,8 +90,13 @@ span{
     
     text-align: center;
     padding: 13px;
+    color: var(--color-gray);
 }
 
 .doTopo{
-    margin-top:30px;
+    margin-top:45px;
+}
+
+b {
+    color: var(--link-color)
 }
