@@ -117,3 +117,5 @@ const somaDoisNumeros = (a,b) => {
 };
 
 somaDoisNumeros(3,1).then((soma) => console.log(soma)); */
+
+console.log("Ola")
