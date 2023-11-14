@@ -7,8 +7,13 @@ body{
     margin: 0 auto;
 }
 
+form{
+    width:600px;  
+    flex-direction: column;
+}
+
 section{
-    height:430px;
+    height:600px;
     width:600px;
     background:#fff;
     border-radius: 10px;
@@ -42,7 +47,7 @@ p{
 }
 
 .dados{
-    height: 220px;
+    height: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -59,3 +64,20 @@ width: 350px;
 
 }
 
+fieldset input,button{
+    border: solid 1px #EBF0FA;
+    padding: 14px;
+    width: 390px;
+    border-radius: 10px;    
+}
+
+span{
+    text-align: center;
+    padding: 13px;
+    color: var(--color-gray);
+    margin-top:45px;
+}
+
+b {
+    color: var(--link-color)
+}
