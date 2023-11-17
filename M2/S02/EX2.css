@@ -13,7 +13,7 @@ form{
 }
 
 section{
-    height:600px;
+    height:690px;
     width:600px;
     background:#fff;
     border-radius: 10px;
@@ -47,7 +47,7 @@ p{
 }
 
 .dados{
-    height: 400px;
+    height: 425px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -60,15 +60,38 @@ p{
 .b1,.b2{
 display: flex;
 flex-direction: row;
-width: 350px;
+width: 420px;
+justify-content: space-around;
 
 }
 
-fieldset input,button{
+fieldset input{
     border: solid 1px #EBF0FA;
     padding: 14px;
     width: 390px;
     border-radius: 10px;    
+}
+
+#email{
+    width:175px;
+    
+}
+
+#tel{
+    width: 175px;
+    display: flex;
+    align-items: center;
+}
+
+#senha{
+    width:175px;
+    
+}
+
+#conf{
+    width: 175px;
+    display: flex;
+    align-items: center;
 }
 
 span{
@@ -78,6 +101,16 @@ span{
     margin-top:45px;
 }
 
+.btn{
+    margin-left: 106px;
+    border: solid 1px #EBF0FA;
+    padding: 14px;
+    width: 415px;
+    border-radius: 10px; 
+}
+
+
 b {
     color: var(--link-color)
 }
+
