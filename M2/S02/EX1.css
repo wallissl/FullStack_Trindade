@@ -83,6 +83,7 @@ fieldset input,button{
 span{
     
     text-align: center;
+    font-size:18px;
     padding: 13px;
     color: var(--color-gray);
 }
