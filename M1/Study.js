@@ -977,5 +977,4 @@ procurarUsuario("Luisa") */
 // npm instal express --save -- Instalar o express
 // Extensão legal para icones - Material Icon
 
-// S6A2 - 00:00 -- 17/07 S12A1 //
-// S2A2 - 42:00
+

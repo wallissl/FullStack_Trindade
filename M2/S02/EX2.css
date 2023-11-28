@@ -113,6 +113,10 @@ span{
     font-weight: 600;
 }
 
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
 
 b {
     color: var(--link-color)

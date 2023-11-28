@@ -1,3 +1,5 @@
+@import 'Variaveis.css';
+
 body {
     background:#EBF0FA;
     display: flex;
@@ -72,6 +74,11 @@ fieldset input,button{
     font-family: arial;
     font-weight: 600;
     margin-top:35px;
+}
+
+a{
+    color:#fff;
+    text-decoration: none;
 }
 
 ::placeholder{
