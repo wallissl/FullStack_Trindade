@@ -1,0 +1,36 @@
+
+header{
+    background: rgb(79, 16, 116);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width:45%;
+    background: #973232;
+}
+
+nav{
+    width:45%;
+    background: #329797;
+}
+
+section{
+    background-color: rgb(136, 126, 41);
+    height:75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    width: 45%;
+    background-color: bisque;
+}
+
+.img-bike {
+    width: 45%;
+    background-color: aqua;
+}
