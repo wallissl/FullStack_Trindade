@@ -1,5 +1,3 @@
-console.log('Hello');
-
 let boton = document.getElementById('botaoConta');
 let aLink = document.getElementById('aLink');
 
@@ -19,8 +17,8 @@ function saiu(){
  
 }
 
-boton.addEventListener("mouseover",clicou);
-boton.addEventListener("mouseout",saiu);
+boton.addEventListener("mouseover",clicou); // Entrada de mouse
+boton.addEventListener("mouseout",saiu); // Saída de mouse
 
 
 
